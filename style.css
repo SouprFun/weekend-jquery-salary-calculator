@@ -1,3 +1,17 @@
 body{
     background-color: rgb(166, 190, 235);
+    margin-left: 10px;
+}
+
+header{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#inputs{
+    margin: 25px;
+}
+
+h3{
+    font-size: 24px
 }
