@@ -1,6 +1,7 @@
 console.log('JS'); 
 
 $(onReady)
+let total = 0
 
 function onReady(){ 
     console.log('JQ');
@@ -10,10 +11,9 @@ function onReady(){
     function submitButtonClick(){
         let firstName = $('#firstName').val();
         let lastName = $('#lastName').val();
-        let id = $('#id').val();            //takes values from input boxes
+        let id = $('#id').val();            //takes values from input
         let title = $('#title').val();
         let salary = Number($('#salary').val());
-        let total = 0
         total += salary;
         
 
