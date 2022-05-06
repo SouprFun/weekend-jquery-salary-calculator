@@ -10,7 +10,7 @@ function onReady(){
     function submitButtonClick(){
         let firstName = $('#firstName').val();
         let lastName = $('#lastName').val();
-        let id = $('#id').val();
+        let id = $('#id').val();            //takes values from input boxes
         let title = $('#title').val();
         let salary = Number($('#salary').val());
         let total = 0
