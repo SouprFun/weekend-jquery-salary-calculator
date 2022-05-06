@@ -22,6 +22,11 @@ function onReady() {
         let salary = Number($('#salary').val()); //makes sure the input coming in is a number
         total += salary; // updates total 
 
+        let className = "";
+        if (total >= 20000){
+            className = 'high'
+        }
+
         //emptying inputs
         /*$('#firstName').val('');
         $('#lastName').val('');
@@ -29,6 +34,7 @@ function onReady() {
         $('#title').val('');
         $('#salary').val('');*/
 
+        //updates table
         $('#tableBody').append(`
             <tr>
                 <td>${firstName}</td>
@@ -39,10 +45,10 @@ function onReady() {
             </tr>
         `)
 
-        console.log(`First name: ${firstName}, last ${lastName}, id${id}, ${title}, ${salary}, ${total}`)
+        //console.log(`First name: ${firstName}, last ${lastName}, id${id}, ${title}, ${salary}, ${total}`)
 
         $('#total').empty(); //empties the 'label that has the monthly $'
-        $('#total').append(`Total Monthly: ${total}`); // adds 'hi' to the emptied label
+        $('#total').append(`<h3 class="${className}"> Total Monthly: ${total} </h3>`); // adds 'hi' to the emptied label
 
     }
 }
