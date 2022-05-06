@@ -42,6 +42,7 @@ function onReady() {
                 <td>${id}</td>
                 <td>${title}</td>
                 <td>${salary}</td>
+                <td><button class="delete">Delete</button></td>
             </tr>
         `)
 
