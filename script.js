@@ -22,7 +22,7 @@ function submitButtonClick() {
     let id = $('#id').val();
     let title = $('#title').val();
     let salary = Number($('#salary').val()); //makes sure the input coming in is a number
-    total += salary; // updates total 
+    total += salary/12; // updates total 
 
     let className = "";
     if (total >= 20000) {
@@ -51,7 +51,7 @@ function submitButtonClick() {
     //console.log(`First name: ${firstName}, last ${lastName}, id${id}, ${title}, ${salary}, ${total}`)
 
     $('#total').empty(); //empties the 'label that has the monthly $'
-    $('#total').append(`<h3 class="${className}"> Total Monthly: ${total} </h3>`); // adds 'hi' to the emptied label
+    $('#total').append(`<h3 class="${className}"> Total Monthly: $${total.toFixed(2)} </h3>`); // adds 'hi' to the emptied label
 
 }
 
