@@ -12,10 +12,10 @@ function onReady() {
 
 function submitButtonClick() {
     //takes values from input
-    /*if ($('#firstName') === '' || $('#lastName') === '' || $('#id') ==='' || $('#title') === '' || $('#salary') === '' || $('#salary') === NaN){
+    if ($('#firstName') === '' || $('#lastName') === '' || $('#id') ==='' || $('#title') === '' || $('#salary') === '' || $('#salary') === NaN){
         alert("Please enter valid inputs!")
         return;
-    }*/
+    }
 
     let firstName = $('#firstName').val();
     let lastName = $('#lastName').val();
@@ -30,11 +30,11 @@ function submitButtonClick() {
     }
 
     //emptying inputs
-    /*$('#firstName').val('');
+    $('#firstName').val('');
     $('#lastName').val('');
     $('#id').val('');
     $('#title').val('');
-    $('#salary').val('');*/
+    $('#salary').val('');
 
     //updates table
     $('#tableBody').append(`
