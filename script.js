@@ -1,32 +1,37 @@
 console.log('JS');
 
-$(onReady)
-let total = 0
+$(onReady);
+let total = 0;
 
 function onReady() {
     console.log('JQ');
     //goes to the button click function
     $('#submit').on('click', submitButtonClick);
     $('#tableBody').on('click', '.delete', deleteButtonClick);
+
 }
 
 function submitButtonClick() {
-    //takes values from input
-    if ($('#firstName') === '' || $('#lastName') === '' || $('#id') ==='' || $('#title') === '' || $('#salary') === '' || $('#salary') === NaN){
-        alert("Please enter valid inputs!")
+    //checks if vlaues are empty and kicks out of the function without clearing inputs so they can adjust.
+    if ($('#firstName').val() === '' || $('#lastName').val() === '' || $('#id').val() === '' || $('#title').val() === '' || $('#salary').val() === '' || $('#salary').val() === NaN) {
+        alert("Please enter valid inputs!");
         return;
     }
 
+    //takes values from input
     let firstName = $('#firstName').val();
     let lastName = $('#lastName').val();
     let id = $('#id').val();
     let title = $('#title').val();
     let salary = Number($('#salary').val()); //makes sure the input coming in is a number
-    total += salary/12; // updates total and devides annual salary by months
+    let monthly = 0;
+    monthly = salary / 12; // finds pay amount per month
+    total += monthly; // updates total and devides annual salary by months
+
 
     let className = "";
     if (total >= 20000) {
-        className = 'high'
+        className = 'high';
     }
 
     //emptying inputs
@@ -44,9 +49,10 @@ function submitButtonClick() {
                 <td>${id}</td>
                 <td>${title}</td>
                 <td>${salary}</td>
+                <td>${monthly.toFixed(2)}</td>
                 <td><button class="delete">Delete</button></td>
             </tr>
-        `)
+        `);
 
     //console.log(`First name: ${firstName}, last ${lastName}, id${id}, ${title}, ${salary}, ${total}`)
 
@@ -55,7 +61,7 @@ function submitButtonClick() {
 
 }
 
-function deleteButtonClick(event){
+function deleteButtonClick(event) {
     //deletes the row
     $(event.target).closest('tr').remove();
 }
