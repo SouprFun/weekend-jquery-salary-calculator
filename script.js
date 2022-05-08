@@ -22,7 +22,7 @@ function submitButtonClick() {
     let id = $('#id').val();
     let title = $('#title').val();
     let salary = Number($('#salary').val()); //makes sure the input coming in is a number
-    total += salary/12; // updates total 
+    total += salary/12; // updates total and devides annual salary by months
 
     let className = "";
     if (total >= 20000) {

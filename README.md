@@ -1,9 +1,5 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Employee Salary Caculator
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+This application takes an employees first name, last name, employee ID, job title, and annual salary, and adds it to be displayed on a table. The application also takes the annual salary and divides it into a per month amount that can be compared to a set monthly budget of $20,000. If the annual payout exceeds the monthly budget of $20,000, the text will turn red.
