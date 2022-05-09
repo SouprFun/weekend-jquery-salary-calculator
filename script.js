@@ -24,8 +24,7 @@ function submitButtonClick() {
     let id = $('#id').val();
     let title = $('#title').val();
     let salary = Number($('#salary').val()); //makes sure the input coming in is a number
-    let monthly = 0;
-    monthly = salary / 12; // finds pay amount per month
+    let monthly = salary / 12; // finds pay amount per month
     total += monthly; // updates total and devides annual salary by months
 
 
