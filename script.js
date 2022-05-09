@@ -13,7 +13,7 @@ function onReady() {
 
 function submitButtonClick() {
     //checks if vlaues are empty and kicks out of the function without clearing inputs so they can adjust.
-    if ($('#firstName').val() === '' || $('#lastName').val() === '' || $('#id').val() === '' || $('#title').val() === '' || $('#salary').val() === '' || $('#salary').val() === NaN) {
+    if ($('#firstName').val() === '' || $('#lastName').val() === '' || $('#id').val() === '' || $('#title').val() === '' || $('#salary').val() === '' || isNaN($('#salary').val())) {
         alert("Please enter valid inputs!");
         return;
     }
